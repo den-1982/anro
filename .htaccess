@@ -1,0 +1,13 @@
+RewriteEngine on
+
+RewriteBase /
+RewriteRule ^(.*\.html)/.*$ $1 [R=301,L]
+
+RewriteCond $1 !^(index\.php|robots\.txt|sitemap\.xml|favicon\.ico|icon|img|captcha|css|js)
+RewriteRule ^(.*)$ /index.php [L]
+
+RewriteCond %{HTTP_HOST} ^www\.my-anro$ [NC]
+RewriteRule ^(.*)$ http://my-anro/$1 [L,R=301]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ http://my-anro [L,R=301]

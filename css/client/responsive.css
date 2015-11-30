@@ -1,0 +1,62 @@
+/* Большой дисплей */
+@media screen and (min-width: 1200px) {}
+
+/* От портретного планшета до ландшафтного экрана и настольных дисплеев */
+@media screen and (min-width: 768px) and (max-width: 979px) {}
+@media screen and (max-width: 979px) {
+	
+	.col-2{width:100%;}
+	.col-3{width:50%;}
+	.col-3x2{width:50%;}
+	.col-4{width:33.33%;}
+	
+	.btn-toggle{display:block;}
+	
+	/* nav */
+	.nav{
+		display:none;
+		float:none !important;
+		clear:both;
+		overflow:hidden;
+	}
+	.nav.open{
+		display:block;
+	}
+	.menu{
+		float:none;
+		padding:10px 0 0;
+		margin-top:0;
+	}
+	.menu li{
+		float:none;
+		margin:0;
+		border-top:1px dotted #eee;
+	}
+	.menu li a{
+		line-height:40px;
+		border:0;
+	}
+	
+	/* info */
+	.info-item{
+		width:50%;
+	}
+}
+
+/* От ландшафтного экрана телефона до потретного планшета */
+@media screen and (max-width: 767px) {
+	.col-2{width:100%;}
+	.col-3{width:100%;}
+	.col-3x2{width:100%;}
+	.col-4{width:50%;}
+	
+	/* info */
+	.info-item{
+		width:100%;
+	}
+}
+
+/* Landscape - телефоны */
+@media screen and (max-width: 480px) {
+	.col-4{width:100%;}
+}

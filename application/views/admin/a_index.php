@@ -1,0 +1,1 @@
+<div class="body">	<?php if ($this->session->userdata('error')):?>	<div class="error-box"><?=$this->session->userdata('error');?></div>	<?php $this->session->unset_userdata('error');?>	<?php endif;?>	<h1 class="title"><?=$h1?></h1>	</div>
